@@ -34,6 +34,7 @@ return [
     'max_price' => 'Maks',
     'all_categories' => 'Ähli kategoriýalar',
     'sort_by' => 'Tertiplemek',
+    'back' => 'Yza',
     'newest' => 'Sene boýunça',
     'price_low' => 'Baha: Arzanlar',
     'price_high' => 'Baha: Gymmatlar',

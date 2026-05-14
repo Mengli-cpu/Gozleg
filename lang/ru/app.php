@@ -19,6 +19,7 @@ return [
     'total_count' => 'Всего заказов',
     'order_no' => '№ Заказа',
     'product' => 'Товар',
+    'back' => 'Назад',
     'date' => 'Дата',
     'status' => 'Статус',
     'amount' => 'Сумма',

@@ -45,5 +45,6 @@ return [
     'in_stock' => 'In Stock',
     'out_of_stock' => 'Out of Stock',
     'buy_now' => 'Buy Now',
+    'back' => 'Back',
     'fast_delivery' => 'Fast delivery throughout Turkmenistan',
 ];

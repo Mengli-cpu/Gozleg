@@ -2,6 +2,13 @@
 
 @section('main-content')
 <div class="container py-5">
+    <div class="mb-4">
+        <a href="{{ url()->previous() == url()->current() ? url('/products') : url()->previous() }}"
+            class="btn btn-outline-info border-0 rounded-pill px-3 fw-bold shadow-sm"
+            style="background: rgba(14, 165, 233, 0.1);">
+            <i class="bi bi-arrow-left me-2"></i> {{ __('app.back') ?? 'Назад' }}
+        </a>
+    </div>
     <div class="row g-5">
         <div class="col-md-5">
             <div class="card border-0 shadow-lg" style="background: #1e293b; border-radius: 30px; overflow: hidden;">
@@ -15,7 +22,7 @@
             <nav aria-label="breadcrumb" class="mb-3">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/products') }}" class="text-info text-decoration-none">{{ __('app.shop') }}</a></li>
-                    <li class="breadcrumb-item text-secondary active">{{ $product->category->name ?? 'Category' }}</li>
+                    <li class="breadcrumb-item text-secondary active">{{ $product->category->{'name_' . app()->getLocale()} ?? $product->name }}</li>
                 </ol>
             </nav>
 

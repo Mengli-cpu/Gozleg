@@ -11,8 +11,8 @@
     </div>
 
     <div class="card-body d-flex flex-column">
-        <small class="text-info mb-1">{{ $np->category->name }}</small>
-        <h5 class="card-title text-white mb-3" style="font-size: 1.1rem;">{{ $np->name }}</h5>
+        <small class="text-info mb-1">{{ $np->category->{'name_' . app()->getLocale()} ?? $np->name }}</small>
+        <h5 class="card-title text-white mb-3" style="font-size: 1.1rem;">{{ $np->{'name_' . app()->getLocale()} ?? $np->name }}</h5>
 
         <div class="mt-auto">
             <div class="d-flex justify-content-between align-items-center">
