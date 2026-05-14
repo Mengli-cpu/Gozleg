@@ -57,7 +57,7 @@
                                                         {{ app()->getLocale() == 'ru' ? 'Посмотри свежее поступление товаров.' : (app()->getLocale() == 'en' ? 'Check out our latest collection.' : 'Täze gelen harytlary görkeziň.') }}
                                                     </p>
                                                 </div>
-                                                <a href="/new" class="btn btn-light btn-sm rounded-pill py-0 px-3 align-self-start fw-bold" style="font-size: 0.75rem; color: #ef4444;">
+                                                <a href="#" class="btn btn-light btn-sm rounded-pill py-0 px-3 align-self-start fw-bold" style="font-size: 0.75rem; color: #ef4444;">
                                                     {{ app()->getLocale() == 'ru' ? 'Перейти' : (app()->getLocale() == 'en' ? 'Go' : 'Görmek') }}
                                                 </a>
                                             </div>
