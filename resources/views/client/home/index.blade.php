@@ -21,21 +21,27 @@
 
     <div class="row g-4">
         @foreach ($newProducts as $np)
-        @include('client.partials.product-card')
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+            @include('client.partials.product-card')
+        </div>
         @endforeach
     </div>
     <h2 class="text-white my-4">{{ __('app.recommended') }}</h2>
 
     <div class="row g-4">
         @foreach ($recommended as $np)
-        @include('client.partials.product-card')
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+            @include('client.partials.product-card')
+        </div>
         @endforeach
     </div>
     <h2 class="text-white my-4">{{ __('app.popular') }} (Top 10)</h2>
 
     <div class="row g-4">
         @foreach ($popular as $np)
-        @include('client.partials.product-card')
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+            @include('client.partials.product-card')
+        </div>
         @endforeach
     </div>
 </div>

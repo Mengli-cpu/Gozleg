@@ -3,8 +3,9 @@
 @section('main-content')
 <div class="container-fluid px-4 mt-4">
     @if(session('success'))
-    <div class="alert alert-success border-0 shadow-sm mb-4 text-white" style="background-color: #10b981; border-radius: 12px;">
+    <div class="alert alert-success border-0 shadow-sm mb-4 justify-content-between text-white" style="background-color: #10b981; border-radius: 12px;">
         <i class="bi bi-check-circle-fill me-2"></i> {{ session('success') }}
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
 
@@ -95,21 +96,4 @@
         {{ $orders->links('pagination::bootstrap-5') }}
     </div>
 </div>
-
-<style>
-    .table thead th {
-        font-size: 11px;
-        letter-spacing: 1px;
-    }
-
-    .dropdown-item {
-        cursor: pointer;
-        transition: 0.2s;
-    }
-
-    .dropdown-item:hover {
-        background-color: rgba(14, 165, 233, 0.2);
-        color: #0ea5e9;
-    }
-</style>
 @endsection

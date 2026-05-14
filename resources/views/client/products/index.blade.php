@@ -55,7 +55,9 @@
             </div>
             <div class="row">
                 @foreach ($products as $np)
-                @include('client.partials.product-card')
+                <div class="col-6 col-md-3 col-lg-4 mb-4">
+                    @include('client.partials.product-card')
+                </div>
                 @endforeach
             </div>
         </div>
