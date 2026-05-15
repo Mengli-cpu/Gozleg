@@ -592,3 +592,17 @@ a.hover-1:hover {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.custom-nav {
+    z-index: 1050 !important;
+}
+
+.custom-nav .dropdown-menu {
+    z-index: 1100 !important;
+}
+.sticky-top {
+    z-index: 1000 !important;
+}
+.custom-nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
