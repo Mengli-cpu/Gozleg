@@ -91,26 +91,11 @@
             </div>
 
             <div class="mt-5 d-flex justify-content-center">
-                {{ $orders->links('pagination::bootstrap-5') }}
+                <div class="custom-pagination">
+                    {{ $orders->links('pagination::bootstrap-5') }}
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<style>
-    .bg-soft-info {
-        background: rgba(14, 165, 233, 0.1);
-    }
-
-    .pagination .page-link {
-        background: #1e293b;
-        border-color: #334155;
-        color: #94a3b8;
-    }
-
-    .pagination .page-item.active .page-link {
-        background: #0ea5e9;
-        border-color: #0ea5e9;
-    }
-</style>
 @endsection

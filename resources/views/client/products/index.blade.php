@@ -61,6 +61,11 @@
                 @endforeach
             </div>
         </div>
+        <div class="mt-5 d-flex justify-content-center">
+            <div class="custom-pagination">
+                {{ $products->links('pagination::bootstrap-5') }}
+            </div>
+        </div>
     </div>
 </div>
 @endsection

@@ -548,3 +548,47 @@ a.hover-1:hover {
 .card:hover {
     transform: translateY(-5px);
 }
+/* Контейнер для пагинации (опционально) */
+.custom-pagination {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* Основной стиль ссылок */
+.custom-pagination .pagination .page-link {
+    background-color: #1e293b; /* Цвет как у карточки */
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 8px 16px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none; /* Убираем стандартную синюю тень Bootstrap */
+}
+
+/* Эффект при наведении */
+.custom-pagination .pagination .page-link:hover {
+    background-color: #334155;
+    color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+/* Активная страница */
+.custom-pagination .pagination .page-item.active .page-link {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+    color: #ffffff;
+    font-weight: bold;
+}
+.custom-pagination .pagination .page-item.disabled .page-link {
+    background-color: #0f172a;
+    border-color: #1e293b;
+    color: #475569;
+}
+.custom-pagination .pagination .page-item:first-child .page-link {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.custom-pagination .pagination .page-item:last-child .page-link {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
