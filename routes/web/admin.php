@@ -8,7 +8,6 @@ use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-
 Route::get('/login', [AuthController::class, 'loginIndex'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::middleware(['auth'])->prefix('admin')->name('auth.')->group(function () {

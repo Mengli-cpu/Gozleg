@@ -548,6 +548,7 @@ a.hover-1:hover {
 .card:hover {
     transform: translateY(-5px);
 }
+
 /* Контейнер для пагинации (опционально) */
 .custom-pagination {
     padding: 10px;
@@ -556,12 +557,14 @@ a.hover-1:hover {
 
 /* Основной стиль ссылок */
 .custom-pagination .pagination .page-link {
-    background-color: #1e293b; /* Цвет как у карточки */
+    background-color: #1e293b;
+    /* Цвет как у карточки */
     border: 1px solid #334155;
     color: #94a3b8;
     padding: 8px 16px;
     transition: all 0.2s ease-in-out;
-    box-shadow: none; /* Убираем стандартную синюю тень Bootstrap */
+    box-shadow: none;
+    /* Убираем стандартную синюю тень Bootstrap */
 }
 
 /* Эффект при наведении */
@@ -578,11 +581,13 @@ a.hover-1:hover {
     color: #ffffff;
     font-weight: bold;
 }
+
 .custom-pagination .pagination .page-item.disabled .page-link {
     background-color: #0f172a;
     border-color: #1e293b;
     color: #475569;
 }
+
 .custom-pagination .pagination .page-item:first-child .page-link {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -592,6 +597,7 @@ a.hover-1:hover {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 .custom-nav {
     z-index: 1050 !important;
 }
@@ -599,10 +605,36 @@ a.hover-1:hover {
 .custom-nav .dropdown-menu {
     z-index: 1100 !important;
 }
+
 .sticky-top {
     z-index: 1000 !important;
 }
+
 .custom-nav {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+.dropdown-menu {
+    margin-top: -1px !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(51, 65, 85, 0.3) !important;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.custom-pagination .page-link {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+    color: white;
 }
