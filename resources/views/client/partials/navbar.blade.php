@@ -41,7 +41,7 @@
                                                         {{ app()->getLocale() == 'ru' ? 'Успей купить по выгодной цене.' : (app()->getLocale() == 'en' ? 'Buy now at the best price.' : 'Amatly bahadan satyn almaga ýetişiň.') }}
                                                     </p>
                                                 </div>
-                                                <a href="/shops" class="btn btn-light btn-sm rounded-pill py-0 px-3 align-self-start fw-bold" style="font-size: 0.75rem; color: #a855f7;">
+                                                <a href="/products" class="btn btn-light btn-sm rounded-pill py-0 px-3 align-self-start fw-bold" style="font-size: 0.75rem; color: #a855f7;">
                                                     {{ app()->getLocale() == 'ru' ? 'Подробнее' : (app()->getLocale() == 'en' ? 'More' : 'Dowamy') }}
                                                 </a>
                                             </div>

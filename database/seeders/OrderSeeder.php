@@ -35,7 +35,7 @@ class OrderSeeder extends Seeder
             [
                 'product_id' => 17,
                 'total_price' => 100.00,
-                'status' => 'canceled',
+                'status' => 'cancelled',
                 'created_at' => now(),
             ],
             [

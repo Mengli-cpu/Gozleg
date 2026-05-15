@@ -28,7 +28,7 @@ return [
     'empty_order' => 'Пустой заказ',
     'status_pending' => 'В ожидании',
     'status_completed' => 'Выполнен',
-    'status_canceled' => 'Отменен',
+    'status_cancelled' => 'Отменен',
     'filter' => 'Фильтры',
     'price_range' => 'Цена (TMT)',
     'min_price' => 'Мин',

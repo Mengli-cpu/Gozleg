@@ -62,7 +62,8 @@
                                         $statusColors = [
                                         'pending' => 'bg-warning text-dark',
                                         'completed' => 'bg-success',
-                                        'canceled' => 'bg-danger'
+                                        'cancelled' => 'bg-danger',
+                                        'processing' => 'bg-info'
                                         ];
                                         $badgeClass = $statusColors[$order->status] ?? 'bg-secondary';
                                         @endphp

@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             OrderItemSeeder::class,
         ]);
         Product::factory(100)->create();
-        Order::factory(50)->create()->each(function ($order) {
+        Order::factory(10)->create()->each(function ($order) {
             OrderItem::factory(rand(1, 5))->create([
                 'order_id' => $order->id
             ]);

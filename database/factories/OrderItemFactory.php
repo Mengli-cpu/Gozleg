@@ -14,9 +14,10 @@ class OrderItemFactory extends Factory
 {
     public function definition(): array
     {
+        $p = Product::inRandomOrder()->first();
         return [
-            'order_id' => Order::inRandomOrder()->first()?->id ?? Order::factory(),
-            'product_id' => $p = Product::inRandomOrder()->first()?->id ?? Product::factory(),
+            'order_id' => $p?->id,
+            'product_id' => $p ?->id,
             'quantity' => fake()->numberBetween(1, 5),
             'price' => $p->price,
         ];

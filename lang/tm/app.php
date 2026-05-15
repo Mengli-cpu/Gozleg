@@ -27,7 +27,7 @@ return [
     'empty_order' => 'Boş sargyt',
     'status_pending' => 'Garaşylýar',
     'status_completed' => 'Tamamlandy',
-    'status_canceled' => 'Goýbolsun edildi',
+    'status_cancelled' => 'Goýbolsun edildi',
     'filter' => 'Filtrler',
     'price_range' => 'Baha (TMT)',
     'min_price' => 'Min',

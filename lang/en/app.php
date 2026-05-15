@@ -27,7 +27,7 @@ return [
     'empty_order' => 'Empty order',
     'status_pending' => 'Pending',
     'status_completed' => 'Completed',
-    'status_canceled' => 'Canceled',
+    'status_cancelled' => 'Cancelled',
     'filter' => 'Filters',
     'price_range' => 'Price (TMT)',
     'min_price' => 'Min',
