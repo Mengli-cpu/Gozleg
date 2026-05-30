@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Product;
 
 class CategoryController extends Controller
 {
@@ -16,6 +17,12 @@ class CategoryController extends Controller
     public function create()
     {
         return view('auth.categories.create');
+    }
+    public function show($id)
+    {
+        $category = Category::findOrFail($id);
+        $products = Product::where('category_id', $id)->paginate(10);
+        return view('auth.categories.show', compact('category', 'products'));
     }
     public function edit($id)
     {

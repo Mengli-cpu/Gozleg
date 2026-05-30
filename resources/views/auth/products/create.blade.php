@@ -21,7 +21,7 @@
             </div>
             @endif
 
-            <form action="{{ route('auth.products.store') }}" method="POST">
+            <form action="{{ route('auth.products.store') }}" method="POST"  enctype="multipart/form-data">
                 @csrf
 
                 <div class="bg-white rounded-4 border-0 p-4 shadow-lg text-start">
@@ -76,6 +76,10 @@
                             <label class="small fw-bold text-secondary mb-1">Description (RU)</label>
                             <textarea name="description_ru" class="form-control placeholder-b" rows="3" placeholder="Описание на русском...">{{ old('description_ru') }}</textarea>
                         </div>
+                        <div class="w-100">
+                            <label class="small fw-bold text-secondary mb-1">Image</label>
+                            <input name="img" type="file" class="form-control placeholder-b" rows="3" placeholder="Image">
+                        </div>
 
                         <div class="col-md-6">
                             <label class="small fw-bold text-secondary mb-1">Price (TMT) <span class="text-danger">*</span></label>
@@ -98,7 +102,6 @@
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
 </div>

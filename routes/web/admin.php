@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
+// 861 10 54 86
 Route::get('/login', [AuthController::class, 'loginIndex'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::middleware(['auth'])->prefix('admin')->name('auth.')->group(function () {
@@ -20,10 +21,13 @@ Route::middleware(['auth'])->prefix('admin')->name('auth.')->group(function () {
         Route::get('/{id}/edit', [ProductController::class, 'edit'])->name('edit');
         Route::put('/{id}', [ProductController::class, 'update'])->name('update');
         Route::delete('/{id}', [ProductController::class, 'destroy'])->name('destroy');
+        Route::get('/show/{id}', [ProductController::class, 'show'])->name('show');
+        Route::get('/lowStock', [ProductController::class, 'low_stock_show'])->name('low_stock');
     });
     Route::prefix('orders')->name('orders.')->group(function () {
         Route::get('/', [OrderController::class, 'index'])->name('index');
         Route::put('/{id}', [OrderController::class, 'update'])->name('update');
+        Route::get('/show/{id}', [OrderController::class, 'show'])->name('show');
     });
     Route::prefix('categories')->name('categories.')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');
@@ -32,6 +36,7 @@ Route::middleware(['auth'])->prefix('admin')->name('auth.')->group(function () {
         Route::get('/{id}/edit', [CategoryController::class, 'edit'])->name('edit');
         Route::put('/{id}', [CategoryController::class, 'update'])->name('update');
         Route::delete('/{id}', [CategoryController::class, 'destroy'])->name('destroy');
+        Route::get('/show/{id}', [CategoryController::class, 'show'])->name('show');
     });
     Route::get('/logout', function () {
         Auth::logout();

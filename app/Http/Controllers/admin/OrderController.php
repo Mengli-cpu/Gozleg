@@ -26,4 +26,9 @@ class OrderController extends Controller
         ]);
         return back()->with('success', "Order #{$id} status changed to " . strtoupper($request->status));
     }
+    public function show($id)
+    {
+        $order = Order::findOrFail($id);
+        return view('auth.orders.show', compact('order'));
+    }
 }

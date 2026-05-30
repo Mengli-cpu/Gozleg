@@ -18,6 +18,7 @@ class Product extends Model
         'description_ru',
         'description_tm',
         'view_count',
+        'img',
         'like_count',
         'price',
         'stock',

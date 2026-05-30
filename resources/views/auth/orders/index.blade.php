@@ -33,8 +33,14 @@
                 </thead>
                 <tbody>
                     @foreach ($orders as $order)
-                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                        <td class="ps-4 fw-bold">#ORD-{{ $order->id }}</td>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);" class="position-relative">
+
+                        <td class="ps-4 fw-bold">
+                            <a href="{{ route('auth.orders.show', $order->id) }}" class="stretched-link text-decoration-none text-white">
+                                #ORD-{{ $order->id }}
+                            </a>
+                        </td>
+
                         <td>
                             <div class="text-white">{{ $order->user_name ?? 'Guest User' }}</div>
                             <div class="text-muted small"><i class="bi bi-telephone me-1"></i>{{ $order->phone ?? 'No phone' }}</div>
@@ -59,13 +65,14 @@
                             {{ $order->created_at->format('d M Y') }}<br>
                             {{ $order->created_at->format('H:i') }}
                         </td>
-                        <td class="pe-4 text-center">
+
+                        <td class="pe-4 text-center" style="position: relative; z-index: 2;">
                             <div class="dropdown">
                                 <button class="btn btn-sm btn-outline-light border-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                                     Manage
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-secondary">
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> View Details</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('auth.orders.show', $order->id) }}"><i class="bi bi-eye me-2"></i> View Details</a></li>
                                     <li>
                                         <hr class="dropdown-divider border-secondary">
                                     </li>

@@ -3,23 +3,21 @@
 @section('main-content')
 <div class="container-fluid px-4 mt-4">
     @if(session('success'))
-    <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm mb-4" role="alert" style="background-color: #10b981; color: white; border-radius: 12px;">
-        <i class="bi bi-check-circle-fill me-2"></i>
-        {{ session('success') }}
+    <div class="alert alert-success border-0 shadow-sm mb-4 justify-content-between text-white" style="background-color: #10b981; border-radius: 12px;">
+        <i class="bi bi-check-circle-fill me-2"></i> {{ session('success') }}
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
+
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h2 class="text-white fw-bold mb-0">
-                <i class="bi bi-box-seam me-2 text-info"></i> Products Management
+                <i class="bi bi-cart-check me-2 text-info"></i> Orders Management
             </h2>
-            <span class="text-secondary small">Total items: <b class="text-info">{{ $products->total() }}</b></span>
+            <span class="text-secondary small">Manage customer purchases and delivery statuses</span>
         </div>
-        <a href="{{ route('auth.products.create') }}" class="btn btn-info text-white fw-bold px-4 shadow-sm" style="border-radius: 10px; background-color: #0ea5e9;">
-            <i class="bi bi-plus-lg me-1"></i> Add New Product
-        </a>
     </div>
+
     <div class="card border-0 shadow-lg" style="background-color: #1e293b; border-radius: 15px; overflow: hidden;">
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0 table-dark">

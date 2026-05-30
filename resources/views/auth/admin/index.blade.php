@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <a class="col-md-3" href="{{ route('auth.products.index') }}" style="text-decoration: none;">
             <div class="card bg-dark border-0 shadow-sm h-100" style="border-radius: 15px; border-left: 4px solid #f59e0b !important;">
                 <div class="card-body p-4">
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -45,13 +45,13 @@
                             <i class="bi bi-box-seam text-warning fs-4"></i>
                         </div>
                     </div>
-                    <h3 class="text-white fw-bold mb-1">{{ \App\Models\Product::count() }}</h3>
+                    <h3 class="a text-white fw-bold mb-1">{{ \App\Models\Product::count() }}</h3>
                     <p class="text-secondary mb-0 small text-uppercase letter-spacing-1">Products</p>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="col-md-3">
+        <a class="col-md-3" style="text-decoration: none;" href="{{ route('auth.products.low_stock') }}">
             <div class="card bg-dark border-0 shadow-sm h-100" style="border-radius: 15px; border-left: 4px solid #ef4444 !important;">
                 <div class="card-body p-4">
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -63,7 +63,7 @@
                     <p class="text-secondary mb-0 small text-uppercase letter-spacing-1">Low Stock Alert</p>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 
     <div class="row g-4">
